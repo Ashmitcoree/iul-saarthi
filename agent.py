@@ -59,17 +59,27 @@ def answer_question(question, documents):
     matches = search_documents(question, documents)
     sources = list(dict.fromkeys(source_label(item) for item in matches))
     if not matches or matches[0]["score"] < MIN_EVIDENCE_SCORE:
-        return {"answer": FALLBACK, "sources": [], "notice": None}
+        return {"answer": FALLBACK, "sources": [], "evidence": [], "notice": None}
 
     evidence = [item for item in matches if item["score"] >= MIN_EVIDENCE_SCORE]
     if not evidence:
-        return {"answer": FALLBACK, "sources": [], "notice": None}
+        return {"answer": FALLBACK, "sources": [], "evidence": [], "notice": None}
 
     try:
         answer = _generate_with_gemma(question, evidence)
         if not answer:
-            return {"answer": FALLBACK, "sources": sources, "notice": None}
-        return {"answer": answer, "sources": sources, "notice": None}
+            return {
+                "answer": FALLBACK,
+                "sources": sources,
+                "evidence": evidence,
+                "notice": None,
+            }
+        return {
+            "answer": answer,
+            "sources": sources,
+            "evidence": evidence,
+            "notice": None,
+        }
     except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as error:
         return {
             "answer": (
@@ -77,6 +87,7 @@ def answer_question(question, documents):
                 "so I can’t generate a grounded answer. Please start Ollama and try again."
             ),
             "sources": sources,
+            "evidence": evidence,
             "notice": f"Local model connection: {error}",
         }
 

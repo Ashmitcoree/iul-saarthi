@@ -6,6 +6,8 @@ A small, local-first campus information assistant demo. It searches a curated JS
 
 The included knowledge base contains only the Hack Day details supplied by the team. It is sample data, not an official Integral University knowledge base. Do not present answers about fees, examinations, registration policy, or course materials until verified university sources are added.
 
+The interface includes suggested questions and an expandable evidence view that displays the retrieved passage and its source for supported answers.
+
 ## Run it
 
 1. Install Python 3.10 or newer.
