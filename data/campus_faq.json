@@ -1,5 +1,5 @@
 {
-  "knowledge_base_notice": "This demo contains only event details supplied by the project team. It is not an official university knowledge base.",
+  "knowledge_base_notice": "This demo contains team-provided Hack Day details and short summaries that link to official university pages. It is not an official university knowledge base and does not continuously sync live information.",
   "documents": [
     {
       "source": "Team-provided Hack Day event information",
@@ -25,6 +25,148 @@
       "source": "Team-provided Hack Day event information",
       "page": null,
       "text": "The registration link provided by the team is https://shorturl.at/3Kgok. The event information says participant seats are limited to 70 to 80."
+    },
+    {
+      "source": "Team-provided Hack Day event information (Hindi summary)",
+      "page": null,
+      "language": "hi",
+      "text": "Hacktoberfest Hack Day x IUL 15 और 16 अक्टूबर 2026 को होगा। दोनों दिनों का समय सुबह 10:00 बजे से शाम 4:00 बजे तक है। स्थान B-Block, LT-8 है।"
+    },
+    {
+      "source": "Team-provided Hack Day event information (Hindi summary)",
+      "page": null,
+      "language": "hi",
+      "text": "Hack Day का उद्देश्य ओपन सोर्स, ओपन-सोर्स AI के साथ निर्माण, व्यावहारिक सीख और अन्य डेवलपर्स के साथ सीखना है।"
+    },
+    {
+      "source": "Team-provided Hack Day event information (Hindi summary)",
+      "page": null,
+      "language": "hi",
+      "text": "यह कार्यक्रम शुरुआती लोगों के लिए भी है। पहले दिन बिना अनुभव वाले लोगों के लिए Git और GitHub का परिचय कार्यशाला होगी।"
+    },
+    {
+      "source": "Team-provided Hack Day event information (Hindi summary)",
+      "page": null,
+      "language": "hi",
+      "text": "कार्यक्रम की जानकारी में नकद पुरस्कार, विजेता ट्रॉफी, प्रतिभागियों के लिए प्रमाणपत्र, आधिकारिक स्वैग और स्टिकर, भोजन और दोनों दिनों में जलपान शामिल हैं।"
+    },
+    {
+      "source": "Team-provided Hack Day event information (Hindi summary)",
+      "page": null,
+      "language": "hi",
+      "text": "टीम द्वारा दिया गया पंजीकरण लिंक https://shorturl.at/3Kgok है। कार्यक्रम में 70 से 80 प्रतिभागियों के लिए सीमित स्थान बताए गए हैं।"
+    },
+    {
+      "source": "Integral University official admissions page",
+      "page": null,
+      "url": "https://www.iul.ac.in/admissions/index",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "For current programs and course-wise fee structure, use the official Integral University Programs and Fee Structure page. Program availability and fee details can change; confirm the latest information directly on the official page or with Admissions."
+    },
+    {
+      "source": "Integral University official admissions page (Hindi summary)",
+      "page": null,
+      "url": "https://www.iul.ac.in/admissions/index",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "वर्तमान पाठ्यक्रमों और पाठ्यक्रम-वार फीस के लिए Integral University का आधिकारिक Programs and Fee Structure पेज देखें। पाठ्यक्रम और फीस बदल सकते हैं; नवीनतम जानकारी आधिकारिक पेज या Admissions विभाग से पुष्टि करें।"
+    },
+    {
+      "source": "Integral University official Admissions & Academics contact page",
+      "page": null,
+      "url": "https://www.iul.ac.in/admissioninfo/Contact.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "For admission, eligibility, fee, and campus questions, contact the Directorate of Admissions and Academics using the official contact page. The page lists +91 9335177775 and admission@iul.ac.in. Verify contact details on the page before use."
+    },
+    {
+      "source": "Integral University official Admissions & Academics contact page (Hindi summary)",
+      "page": null,
+      "url": "https://www.iul.ac.in/admissioninfo/Contact.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "प्रवेश, पात्रता, फीस और कैंपस से जुड़े सवालों के लिए Admissions and Academics Directorate के आधिकारिक संपर्क पेज का उपयोग करें। पेज पर +91 9335177775 और admission@iul.ac.in दिए गए हैं। उपयोग से पहले पेज पर विवरण जाँचें।"
+    },
+    {
+      "source": "Integral University official noticeboard",
+      "page": null,
+      "url": "https://www.iul.ac.in/noticeboard.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "For the latest university announcements and notices, check the official Integral University noticeboard. This prototype does not continuously sync notices, so confirm current dates and deadlines on the live university page."
+    },
+    {
+      "source": "Integral University official noticeboard (Hindi summary)",
+      "page": null,
+      "url": "https://www.iul.ac.in/noticeboard.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "विश्वविद्यालय की नवीनतम घोषणाओं और नोटिस के लिए Integral University का आधिकारिक noticeboard देखें। यह प्रोटोटाइप नोटिस को लगातार अपडेट नहीं करता; तिथियों और समय-सीमाओं की पुष्टि लाइव विश्वविद्यालय पेज पर करें।"
+    },
+    {
+      "source": "Integral University official admission policy",
+      "page": null,
+      "url": "https://www.iul.ac.in/AdmissionInfo/AdmissionPolicy.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "For admission eligibility and application guidance, refer to the official Integral University admission policy and current prospectus. Eligibility varies by program, and the university may update requirements; confirm the applicable details with Admissions."
+    },
+    {
+      "source": "Integral University official admission policy (Hindi summary)",
+      "page": null,
+      "url": "https://www.iul.ac.in/AdmissionInfo/AdmissionPolicy.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "प्रवेश पात्रता और आवेदन मार्गदर्शन के लिए Integral University की आधिकारिक admission policy और वर्तमान prospectus देखें। पात्रता पाठ्यक्रम के अनुसार अलग होती है और आवश्यकताएँ बदल सकती हैं; Admissions विभाग से लागू विवरण की पुष्टि करें।"
+    },
+    {
+      "source": "Integral University official DSW contact page",
+      "page": null,
+      "url": "https://www.iul.ac.in/dsw/contact.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "The Dean of Students’ Welfare office is listed at Room D019, Academic Block D, Integral University, Kursi Road, Lucknow 226026. The official page lists phone +91 6390011283/84/85 extension 3001, mobile 7800089633, and dsw@iul.ac.in. The university map link shows the general campus pin, not an indoor route."
+    },
+    {
+      "source": "Integral University official DSW contact page (Hindi summary)",
+      "page": null,
+      "url": "https://www.iul.ac.in/dsw/contact.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "Dean of Students’ Welfare (DSW) का कार्यालय Room D019, Academic Block D, Integral University, Kursi Road, Lucknow 226026 पर है। आधिकारिक पेज पर फोन +91 6390011283/84/85 extension 3001, मोबाइल 7800089633 और dsw@iul.ac.in दिया गया है। विश्वविद्यालय का मैप सामान्य कैंपस स्थान दिखाता है, कमरे तक का अंदरूनी रास्ता नहीं।"
+    },
+    {
+      "source": "Integral University official Admissions & Academics contact page",
+      "page": null,
+      "url": "https://www.iul.ac.in/admissioninfo/Contact.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "The official admissions contact page lists the Admissions Cell phone +91 9335177775 and email admission@iul.ac.in, with the university correspondence address at Dasauli, Bas-ha, Kursi Road, Lucknow 226026. The public page does not specify the Admissions office block or room, so contact them for directions before visiting."
+    },
+    {
+      "source": "Integral University official Admissions & Academics contact page (Hindi summary)",
+      "page": null,
+      "url": "https://www.iul.ac.in/admissioninfo/Contact.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "आधिकारिक admissions contact पेज पर Admissions Cell का फोन +91 9335177775 और ईमेल admission@iul.ac.in है। विश्वविद्यालय का पता Dasauli, Bas-ha, Kursi Road, Lucknow 226026 दिया गया है। पेज पर Admissions कार्यालय का ब्लॉक या कमरा नहीं है; आने से पहले दिशा जानने के लिए संपर्क करें।"
+    },
+    {
+      "source": "Integral University official hostel information page",
+      "page": null,
+      "url": "https://www.iul.ac.in/admissions/Hostel_Facility",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "For hostel enquiries, the official university hostel page lists +91 8881103500 for the boys hostel and +91 8881103400 for the girls hostel. The page does not specify an office room; call for directions before visiting."
+    },
+    {
+      "source": "Integral University official hostel information page (Hindi summary)",
+      "page": null,
+      "url": "https://www.iul.ac.in/admissions/Hostel_Facility",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "Hostel से जुड़ी पूछताछ के लिए विश्वविद्यालय के आधिकारिक hostel पेज पर boys hostel का नंबर +91 8881103500 और girls hostel का नंबर +91 8881103400 दिया गया है। पेज पर कार्यालय का कमरा नहीं दिया गया; आने से पहले रास्ते के लिए फोन करें।"
     }
   ]
 }

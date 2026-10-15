@@ -31,6 +31,9 @@ def load_documents(data):
                     "text": text,
                     "source": source,
                     "page": item.get("page"),
+                    "url": str(item.get("url", "")).strip() or None,
+                    "language": str(item.get("language", "en")).strip() or "en",
+                    "verified_on": str(item.get("verified_on", "")).strip() or None,
                 }
             )
     return valid
@@ -43,19 +46,25 @@ def _term_counts(tokens):
     return counts
 
 
-def search_documents(query, documents, limit=3):
+def search_documents(query, documents, limit=3, language=None):
     """Small local TF-IDF search; each result keeps its source metadata."""
     query_counts = _term_counts(tokenize(query))
     if not query_counts or not documents:
         return []
 
-    doc_tokens = [tokenize(item["text"]) for item in documents]
+    eligible = [
+        item for item in documents
+        if language in (None, "auto") or item.get("language", "en") == language
+    ]
+    if not eligible:
+        eligible = documents
+    doc_tokens = [tokenize(item["text"]) for item in eligible]
     document_frequency = {}
     for tokens in doc_tokens:
         for term in set(tokens):
             document_frequency[term] = document_frequency.get(term, 0) + 1
 
-    total_docs = len(documents)
+    total_docs = len(eligible)
 
     def weighted(counts):
         vector = {}
@@ -67,7 +76,7 @@ def search_documents(query, documents, limit=3):
     query_vector = weighted(query_counts)
     query_norm = math.sqrt(sum(value * value for value in query_vector.values())) or 1.0
     ranked = []
-    for item, tokens in zip(documents, doc_tokens):
+    for item, tokens in zip(eligible, doc_tokens):
         vector = weighted(_term_counts(tokens))
         norm = math.sqrt(sum(value * value for value in vector.values())) or 1.0
         score = sum(value * vector.get(term, 0.0) for term, value in query_vector.items())

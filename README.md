@@ -4,9 +4,9 @@ A small, local-first campus information assistant demo. It searches a curated JS
 
 ## Demo scope
 
-The included knowledge base contains only the Hack Day details supplied by the team. It is sample data, not an official Integral University knowledge base. Do not present answers about fees, examinations, registration policy, or course materials until verified university sources are added.
+The knowledge base contains team-provided Hack Day details and short, bilingual guides that point to official Integral University admissions, contacts, noticeboard, and admission-policy pages. It is not an official university knowledge base and does not continuously sync live information or student records. Always confirm changing fees, eligibility, notices, and deadlines on the linked university page or with the relevant office.
 
-The interface includes suggested questions and an expandable evidence view that displays the retrieved passage and its source for supported answers.
+The interface includes English/Hindi reply selection, suggested questions, an expandable evidence view with official source links and page-check dates, a campus office finder, and a session-only helpfulness control. The office finder uses public university details; only locations explicitly published by the university are shown as exact rooms. Its map link points to the general campus pin, not an indoor route. Hindi retrieval is supported for Hindi written in Devanagari; choose Hindi in the sidebar for romanized Hindi input. Feedback is not saved after the browser session ends.
 
 ## Run it
 
@@ -39,7 +39,9 @@ The app uses Ollama at `http://localhost:11434` and the model name `gemma4:e2b` 
 
 1. Ask: **Where is the Hack Day being held?** The assistant should answer from the event information and show its source.
 2. Ask: **What is the Hack Day schedule?** It should answer with the dates and hours from the same source.
-3. Ask: **What is the university's exam fee deadline?** The demo data does not contain this, so the assistant should say it cannot confirm and suggest checking with the relevant office.
+3. Ask in Hindi: **हैक डे कहाँ होगा?** The assistant should answer in Hindi from the Hindi event summary and show its source.
+4. Ask: **Where can I find current program fees?** It should point to the official Programs and Fee Structure page.
+5. Ask: **What is the university's exam fee deadline?** The demo does not contain this, so the assistant should say it cannot confirm and suggest checking with the relevant office.
 
 ## How the agent workflow works
 
@@ -55,9 +57,12 @@ Add passages to `data/campus_faq.json` using this shape:
 {
   "source": "Official document title",
   "page": 2,
+  "url": "https://www.iul.ac.in/example",
+  "language": "en",
+  "verified_on": "2026-10-16",
   "text": "A short, verified passage from that document."
 }
 ```
 
-Use a page number only when the source is a paginated document. For team-provided event details without a page, use `null`. Keep the source attached to each passage so the app can show where an answer came from.
+Use a page number only when the source is a paginated document. For web pages and team-provided event details, use `null`. Add a `hi` passage for an approved Hindi summary, and keep the source, official URL, and date the page was checked so the app can show where an answer came from and how fresh its summary is. These dates are recorded by the project team and are not updated automatically. Update office details in `data/campus_offices.json`; do not guess room numbers or building locations.
 

@@ -1,0 +1,38 @@
+{
+  "verified_on": "2026-10-16",
+  "campus_map_url": "https://www.google.com/maps/search/?api=1&query=26.958453583107936%2C80.99704211504593",
+  "offices": [
+    {
+      "name": "Dean of Students’ Welfare (DSW)",
+      "location": "Room D019, Academic Block D, Integral University, Kursi Road, Lucknow 226026.",
+      "directions_note": "The official page specifies this room and block. The map button opens the university campus pin, not an indoor route to the room.",
+      "contact": "+91 6390011283/84/85 (Extension 3001) · 7800089633 · dsw@iul.ac.in",
+      "source": "Official DSW contact page",
+      "url": "https://www.iul.ac.in/dsw/contact.aspx"
+    },
+    {
+      "name": "Admissions & Academics",
+      "location": "Integral University, Dasauli, Bas-ha, Kursi Road, Lucknow 226026.",
+      "directions_note": "The official public contact page does not list an office block or room. Call or email Admissions before visiting to confirm where to go.",
+      "contact": "+91 9335177775 · admission@iul.ac.in",
+      "source": "Official Admissions & Academics contact page",
+      "url": "https://www.iul.ac.in/admissioninfo/Contact.aspx"
+    },
+    {
+      "name": "Hostel enquiry",
+      "location": "Integral University campus, Kursi Road, Lucknow.",
+      "directions_note": "The official hostel page lists enquiry contacts but does not specify an office room. Call first for directions.",
+      "contact": "Boys: +91 8881103500 · Girls: +91 8881103400",
+      "source": "Official hostel information page",
+      "url": "https://www.iul.ac.in/admissions/Hostel_Facility"
+    },
+    {
+      "name": "Main university campus",
+      "location": "Integral University, Dasauli, Bas-ha, Kursi Road, Lucknow 226026.",
+      "directions_note": "This is the general campus location. Check with the relevant office for a specific building or room.",
+      "contact": "University contact page: +91 6390011283/84/85 · info@iul.ac.in",
+      "source": "Official university contact page",
+      "url": "https://www.iul.ac.in/Contactus.aspx"
+    }
+  ]
+}
