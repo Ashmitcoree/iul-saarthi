@@ -4,57 +4,67 @@
     {
       "source": "Team-provided Hack Day event information",
       "page": null,
-      "text": "Hacktoberfest Hack Day x IUL takes place on 15 and 16 October 2026. The daily schedule is 10:00 AM to 4:00 PM. The venue is B-Block, LT-8."
+      "text": "Hacktoberfest Hack Day x IUL takes place on 15 and 16 October 2026. The daily schedule is 10:00 AM to 4:00 PM. The venue is B-Block, LT-8.",
+      "question": "When and where is Hacktoberfest Hack Day x IUL?"
     },
     {
       "source": "Team-provided Hack Day event information",
       "page": null,
-      "text": "The Hack Day focuses on open source, building with open-source AI, hands-on learning, and learning with fellow developers."
+      "text": "The Hack Day focuses on open source, building with open-source AI, hands-on learning, and learning with fellow developers.",
+      "question": "What is the Hack Day about?"
     },
     {
       "source": "Team-provided Hack Day event information",
       "page": null,
-      "text": "The event is beginner friendly. Day 1 includes a Git and GitHub onboarding workshop for people with zero experience."
+      "text": "The event is beginner friendly. Day 1 includes a Git and GitHub onboarding workshop for people with zero experience.",
+      "question": "Is the Hack Day suitable for beginners?"
     },
     {
       "source": "Team-provided Hack Day event information",
       "page": null,
-      "text": "The event information lists cash prizes, winner trophies, official certificates for attendees, official swags and stickers, food, and refreshments across both days."
+      "text": "The event information lists cash prizes, winner trophies, official certificates for attendees, official swags and stickers, food, and refreshments across both days.",
+      "question": "What is included for Hack Day participants?"
     },
     {
       "source": "Team-provided Hack Day event information",
       "page": null,
-      "text": "The registration link provided by the team is https://shorturl.at/3Kgok. The event information says participant seats are limited to 70 to 80."
+      "text": "The registration link provided by the team is https://shorturl.at/3Kgok. The event information says participant seats are limited to 70 to 80.",
+      "question": "How do I register for Hack Day, and how many seats are available?"
     },
     {
       "source": "Team-provided Hack Day event information (Hindi summary)",
       "page": null,
       "language": "hi",
-      "text": "Hacktoberfest Hack Day x IUL 15 और 16 अक्टूबर 2026 को होगा। दोनों दिनों का समय सुबह 10:00 बजे से शाम 4:00 बजे तक है। स्थान B-Block, LT-8 है।"
+      "text": "Hacktoberfest Hack Day x IUL 15 और 16 अक्टूबर 2026 को होगा। दोनों दिनों का समय सुबह 10:00 बजे से शाम 4:00 बजे तक है। स्थान B-Block, LT-8 है।",
+      "question": "Hacktoberfest Hack Day x IUL कब और कहाँ होगा?"
     },
     {
       "source": "Team-provided Hack Day event information (Hindi summary)",
       "page": null,
       "language": "hi",
-      "text": "Hack Day का उद्देश्य ओपन सोर्स, ओपन-सोर्स AI के साथ निर्माण, व्यावहारिक सीख और अन्य डेवलपर्स के साथ सीखना है।"
+      "text": "Hack Day का उद्देश्य ओपन सोर्स, ओपन-सोर्स AI के साथ निर्माण, व्यावहारिक सीख और अन्य डेवलपर्स के साथ सीखना है।",
+      "question": "Hack Day का उद्देश्य क्या है?"
     },
     {
       "source": "Team-provided Hack Day event information (Hindi summary)",
       "page": null,
       "language": "hi",
-      "text": "यह कार्यक्रम शुरुआती लोगों के लिए भी है। पहले दिन बिना अनुभव वाले लोगों के लिए Git और GitHub का परिचय कार्यशाला होगी।"
+      "text": "यह कार्यक्रम शुरुआती लोगों के लिए भी है। पहले दिन बिना अनुभव वाले लोगों के लिए Git और GitHub का परिचय कार्यशाला होगी।",
+      "question": "क्या Hack Day शुरुआती लोगों के लिए है?"
     },
     {
       "source": "Team-provided Hack Day event information (Hindi summary)",
       "page": null,
       "language": "hi",
-      "text": "कार्यक्रम की जानकारी में नकद पुरस्कार, विजेता ट्रॉफी, प्रतिभागियों के लिए प्रमाणपत्र, आधिकारिक स्वैग और स्टिकर, भोजन और दोनों दिनों में जलपान शामिल हैं।"
+      "text": "कार्यक्रम की जानकारी में नकद पुरस्कार, विजेता ट्रॉफी, प्रतिभागियों के लिए प्रमाणपत्र, आधिकारिक स्वैग और स्टिकर, भोजन और दोनों दिनों में जलपान शामिल हैं।",
+      "question": "Hack Day में प्रतिभागियों को क्या मिलेगा?"
     },
     {
       "source": "Team-provided Hack Day event information (Hindi summary)",
       "page": null,
       "language": "hi",
-      "text": "टीम द्वारा दिया गया पंजीकरण लिंक https://shorturl.at/3Kgok है। कार्यक्रम में 70 से 80 प्रतिभागियों के लिए सीमित स्थान बताए गए हैं।"
+      "text": "टीम द्वारा दिया गया पंजीकरण लिंक https://shorturl.at/3Kgok है। कार्यक्रम में 70 से 80 प्रतिभागियों के लिए सीमित स्थान बताए गए हैं।",
+      "question": "Hack Day के लिए पंजीकरण कैसे करें और कितनी सीटें हैं?"
     },
     {
       "source": "Integral University official admissions page",
@@ -62,7 +72,8 @@
       "url": "https://www.iul.ac.in/admissions/index",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "For current programs and course-wise fee structure, use the official Integral University Programs and Fee Structure page. Program availability and fee details can change; confirm the latest information directly on the official page or with Admissions."
+      "text": "For current programs and course-wise fee structure, use the official Integral University Programs and Fee Structure page. Program availability and fee details can change; confirm the latest information directly on the official page or with Admissions.",
+      "question": "Where can I check current programs and course fees?"
     },
     {
       "source": "Integral University official admissions page (Hindi summary)",
@@ -70,7 +81,8 @@
       "url": "https://www.iul.ac.in/admissions/index",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "वर्तमान पाठ्यक्रमों और पाठ्यक्रम-वार फीस के लिए Integral University का आधिकारिक Programs and Fee Structure पेज देखें। पाठ्यक्रम और फीस बदल सकते हैं; नवीनतम जानकारी आधिकारिक पेज या Admissions विभाग से पुष्टि करें।"
+      "text": "वर्तमान पाठ्यक्रमों और पाठ्यक्रम-वार फीस के लिए Integral University का आधिकारिक Programs and Fee Structure पेज देखें। पाठ्यक्रम और फीस बदल सकते हैं; नवीनतम जानकारी आधिकारिक पेज या Admissions विभाग से पुष्टि करें।",
+      "question": "वर्तमान पाठ्यक्रम और फीस कहाँ देखें?"
     },
     {
       "source": "Integral University official Admissions & Academics contact page",
@@ -78,7 +90,8 @@
       "url": "https://www.iul.ac.in/admissioninfo/Contact.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "For admission, eligibility, fee, and campus questions, contact the Directorate of Admissions and Academics using the official contact page. The page lists +91 9335177775 and admission@iul.ac.in. Verify contact details on the page before use."
+      "text": "For admission, eligibility, fee, and campus questions, contact the Directorate of Admissions and Academics using the official contact page. The page lists +91 9335177775 and admission@iul.ac.in. Verify contact details on the page before use.",
+      "question": "How do I contact Admissions and Academics?"
     },
     {
       "source": "Integral University official Admissions & Academics contact page (Hindi summary)",
@@ -86,7 +99,8 @@
       "url": "https://www.iul.ac.in/admissioninfo/Contact.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "प्रवेश, पात्रता, फीस और कैंपस से जुड़े सवालों के लिए Admissions and Academics Directorate के आधिकारिक संपर्क पेज का उपयोग करें। पेज पर +91 9335177775 और admission@iul.ac.in दिए गए हैं। उपयोग से पहले पेज पर विवरण जाँचें।"
+      "text": "प्रवेश, पात्रता, फीस और कैंपस से जुड़े सवालों के लिए Admissions and Academics Directorate के आधिकारिक संपर्क पेज का उपयोग करें। पेज पर +91 9335177775 और admission@iul.ac.in दिए गए हैं। उपयोग से पहले पेज पर विवरण जाँचें।",
+      "question": "Admissions and Academics से कैसे संपर्क करें?"
     },
     {
       "source": "Integral University official noticeboard",
@@ -94,7 +108,8 @@
       "url": "https://www.iul.ac.in/noticeboard.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "For the latest university announcements and notices, check the official Integral University noticeboard. This prototype does not continuously sync notices, so confirm current dates and deadlines on the live university page."
+      "text": "For the latest university announcements and notices, check the official Integral University noticeboard. This prototype does not continuously sync notices, so confirm current dates and deadlines on the live university page.",
+      "question": "Where can I find the latest university notices?"
     },
     {
       "source": "Integral University official noticeboard (Hindi summary)",
@@ -102,7 +117,8 @@
       "url": "https://www.iul.ac.in/noticeboard.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "विश्वविद्यालय की नवीनतम घोषणाओं और नोटिस के लिए Integral University का आधिकारिक noticeboard देखें। यह प्रोटोटाइप नोटिस को लगातार अपडेट नहीं करता; तिथियों और समय-सीमाओं की पुष्टि लाइव विश्वविद्यालय पेज पर करें।"
+      "text": "विश्वविद्यालय की नवीनतम घोषणाओं और नोटिस के लिए Integral University का आधिकारिक noticeboard देखें। यह प्रोटोटाइप नोटिस को लगातार अपडेट नहीं करता; तिथियों और समय-सीमाओं की पुष्टि लाइव विश्वविद्यालय पेज पर करें।",
+      "question": "विश्वविद्यालय के नवीनतम नोटिस कहाँ देखें?"
     },
     {
       "source": "Integral University official admission policy",
@@ -110,7 +126,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/AdmissionPolicy.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "For admission eligibility and application guidance, refer to the official Integral University admission policy and current prospectus. Eligibility varies by program, and the university may update requirements; confirm the applicable details with Admissions."
+      "text": "For admission eligibility and application guidance, refer to the official Integral University admission policy and current prospectus. Eligibility varies by program, and the university may update requirements; confirm the applicable details with Admissions.",
+      "question": "Where can I confirm admission eligibility and application guidance?"
     },
     {
       "source": "Integral University official admission policy (Hindi summary)",
@@ -118,7 +135,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/AdmissionPolicy.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "प्रवेश पात्रता और आवेदन मार्गदर्शन के लिए Integral University की आधिकारिक admission policy और वर्तमान prospectus देखें। पात्रता पाठ्यक्रम के अनुसार अलग होती है और आवश्यकताएँ बदल सकती हैं; Admissions विभाग से लागू विवरण की पुष्टि करें।"
+      "text": "प्रवेश पात्रता और आवेदन मार्गदर्शन के लिए Integral University की आधिकारिक admission policy और वर्तमान prospectus देखें। पात्रता पाठ्यक्रम के अनुसार अलग होती है और आवश्यकताएँ बदल सकती हैं; Admissions विभाग से लागू विवरण की पुष्टि करें।",
+      "question": "प्रवेश पात्रता और आवेदन की जानकारी कहाँ मिलेगी?"
     },
     {
       "source": "Integral University official DSW contact page",
@@ -126,7 +144,8 @@
       "url": "https://www.iul.ac.in/dsw/contact.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "The Dean of Students’ Welfare office is listed at Room D019, Academic Block D, Integral University, Kursi Road, Lucknow 226026. The official page lists phone +91 6390011283/84/85 extension 3001, mobile 7800089633, and dsw@iul.ac.in. The university map link shows the general campus pin, not an indoor route."
+      "text": "The Dean of Students’ Welfare office is listed at Room D019, Academic Block D, Integral University, Kursi Road, Lucknow 226026. The official page lists phone +91 6390011283/84/85 extension 3001, mobile 7800089633, and dsw@iul.ac.in. The university map link shows the general campus pin, not an indoor route.",
+      "question": "Where is the Dean of Students’ Welfare office, and how can I contact it?"
     },
     {
       "source": "Integral University official DSW contact page (Hindi summary)",
@@ -134,7 +153,8 @@
       "url": "https://www.iul.ac.in/dsw/contact.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "Dean of Students’ Welfare (DSW) का कार्यालय Room D019, Academic Block D, Integral University, Kursi Road, Lucknow 226026 पर है। आधिकारिक पेज पर फोन +91 6390011283/84/85 extension 3001, मोबाइल 7800089633 और dsw@iul.ac.in दिया गया है। विश्वविद्यालय का मैप सामान्य कैंपस स्थान दिखाता है, कमरे तक का अंदरूनी रास्ता नहीं।"
+      "text": "Dean of Students’ Welfare (DSW) का कार्यालय Room D019, Academic Block D, Integral University, Kursi Road, Lucknow 226026 पर है। आधिकारिक पेज पर फोन +91 6390011283/84/85 extension 3001, मोबाइल 7800089633 और dsw@iul.ac.in दिया गया है। विश्वविद्यालय का मैप सामान्य कैंपस स्थान दिखाता है, कमरे तक का अंदरूनी रास्ता नहीं।",
+      "question": "Dean of Students’ Welfare का कार्यालय कहाँ है और संपर्क कैसे करें?"
     },
     {
       "source": "Integral University official Admissions & Academics contact page",
@@ -142,7 +162,8 @@
       "url": "https://www.iul.ac.in/admissioninfo/Contact.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "The official admissions contact page lists the Admissions Cell phone +91 9335177775 and email admission@iul.ac.in, with the university correspondence address at Dasauli, Bas-ha, Kursi Road, Lucknow 226026. The public page does not specify the Admissions office block or room, so contact them for directions before visiting."
+      "text": "The official admissions contact page lists the Admissions Cell phone +91 9335177775 and email admission@iul.ac.in, with the university correspondence address at Dasauli, Bas-ha, Kursi Road, Lucknow 226026. The public page does not specify the Admissions office block or room, so contact them for directions before visiting.",
+      "question": "How can I contact the Admissions Cell?"
     },
     {
       "source": "Integral University official Admissions & Academics contact page (Hindi summary)",
@@ -150,7 +171,8 @@
       "url": "https://www.iul.ac.in/admissioninfo/Contact.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "आधिकारिक admissions contact पेज पर Admissions Cell का फोन +91 9335177775 और ईमेल admission@iul.ac.in है। विश्वविद्यालय का पता Dasauli, Bas-ha, Kursi Road, Lucknow 226026 दिया गया है। पेज पर Admissions कार्यालय का ब्लॉक या कमरा नहीं है; आने से पहले दिशा जानने के लिए संपर्क करें।"
+      "text": "आधिकारिक admissions contact पेज पर Admissions Cell का फोन +91 9335177775 और ईमेल admission@iul.ac.in है। विश्वविद्यालय का पता Dasauli, Bas-ha, Kursi Road, Lucknow 226026 दिया गया है। पेज पर Admissions कार्यालय का ब्लॉक या कमरा नहीं है; आने से पहले दिशा जानने के लिए संपर्क करें।",
+      "question": "Admissions Cell से कैसे संपर्क करें?"
     },
     {
       "source": "Integral University official hostel information page",
@@ -158,7 +180,8 @@
       "url": "https://www.iul.ac.in/admissions/Hostel_Facility",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "For hostel enquiries, the official university hostel page lists +91 8881103500 for the boys hostel and +91 8881103400 for the girls hostel. The page does not specify an office room; call for directions before visiting."
+      "text": "For hostel enquiries, the official university hostel page lists +91 8881103500 for the boys hostel and +91 8881103400 for the girls hostel. The page does not specify an office room; call for directions before visiting.",
+      "question": "What are the boys’ and girls’ hostel enquiry phone numbers?"
     },
     {
       "source": "Integral University official hostel information page (Hindi summary)",
@@ -166,7 +189,8 @@
       "url": "https://www.iul.ac.in/admissions/Hostel_Facility",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "Hostel से जुड़ी पूछताछ के लिए विश्वविद्यालय के आधिकारिक hostel पेज पर boys hostel का नंबर +91 8881103500 और girls hostel का नंबर +91 8881103400 दिया गया है। पेज पर कार्यालय का कमरा नहीं दिया गया; आने से पहले रास्ते के लिए फोन करें।"
+      "text": "Hostel से जुड़ी पूछताछ के लिए विश्वविद्यालय के आधिकारिक hostel पेज पर boys hostel का नंबर +91 8881103500 और girls hostel का नंबर +91 8881103400 दिया गया है। पेज पर कार्यालय का कमरा नहीं दिया गया; आने से पहले रास्ते के लिए फोन करें।",
+      "question": "Boys’ और girls’ hostel के enquiry नंबर क्या हैं?"
     },
     {
       "source": "Integral University official Admissions FAQ",
@@ -174,7 +198,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "FAQ: Is Integral University recognized by UGC? Answer: The university FAQ states that Integral University is recognized by UGC under Sections 2(f) and 12B of the UGC Act, 1956."
+      "text": "FAQ: Is Integral University recognized by UGC? Answer: The university FAQ states that Integral University is recognized by UGC under Sections 2(f) and 12B of the UGC Act, 1956.",
+      "question": "Is Integral University recognized by UGC?"
     },
     {
       "source": "Integral University official Admissions FAQ",
@@ -182,7 +207,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "FAQ: When do students receive their University ID card? Answer: The university FAQ says it takes 10 days after registration; the card is issued by the student's respective department or the Academic section."
+      "text": "FAQ: When do students receive their University ID card? Answer: The university FAQ says it takes 10 days after registration; the card is issued by the student's respective department or the Academic section.",
+      "question": "When do students receive their University ID card?"
     },
     {
       "source": "Integral University official Admissions FAQ",
@@ -190,7 +216,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "FAQ: Are Integral University technical programs approved by AICTE? Answer: The university FAQ states that Integral University was established through an Act of the Uttar Pradesh Legislature and is recognized by UGC, and says it does not require AICTE approval. For a specific program or regulatory question, confirm directly with the university and the relevant regulator."
+      "text": "FAQ: Are Integral University technical programs approved by AICTE? Answer: The university FAQ states that Integral University was established through an Act of the Uttar Pradesh Legislature and is recognized by UGC, and says it does not require AICTE approval. For a specific program or regulatory question, confirm directly with the university and the relevant regulator.",
+      "question": "Are Integral University technical programs approved by AICTE?"
     },
     {
       "source": "Integral University official Admissions FAQ",
@@ -198,7 +225,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "FAQ: Is there an entrance exam for admission? Answer: The university FAQ says eligible applicants are required to take IUET (Integral University Entrance Test). Applicants who have qualified JEE Main, UPSEE, UNI-GAUGE, or another government/prominent university entrance exam may be exempt at the university's discretion. Confirm current program requirements with Admissions."
+      "text": "FAQ: Is there an entrance exam for admission? Answer: The university FAQ says eligible applicants are required to take IUET (Integral University Entrance Test). Applicants who have qualified JEE Main, UPSEE, UNI-GAUGE, or another government/prominent university entrance exam may be exempt at the university's discretion. Confirm current program requirements with Admissions.",
+      "question": "Is there an entrance exam for admission?"
     },
     {
       "source": "Integral University official Admissions FAQ",
@@ -206,7 +234,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "FAQ: Does Integral University offer admission under a sports quota? Answer: The official FAQ says students with national-, state-, or district-level sporting achievements may be eligible and that the university offers a 5% relaxation in qualifying-exam marks. Confirm current eligibility and evidence requirements with Admissions."
+      "text": "FAQ: Does Integral University offer admission under a sports quota? Answer: The official FAQ says students with national-, state-, or district-level sporting achievements may be eligible and that the university offers a 5% relaxation in qualifying-exam marks. Confirm current eligibility and evidence requirements with Admissions.",
+      "question": "Does Integral University offer admission under a sports quota?"
     },
     {
       "source": "Integral University official Admissions FAQ",
@@ -214,7 +243,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "FAQ: Does Integral University provide education-loan assistance? Answer: The official FAQ says the university supports deserving/meritorious students seeking financial assistance and arranges bank kiosks during admission counselling. Contact Admissions for current details; this does not guarantee loan approval."
+      "text": "FAQ: Does Integral University provide education-loan assistance? Answer: The official FAQ says the university supports deserving/meritorious students seeking financial assistance and arranges bank kiosks during admission counselling. Contact Admissions for current details; this does not guarantee loan approval.",
+      "question": "Does Integral University provide education-loan assistance?"
     },
     {
       "source": "Integral University official Admissions FAQ",
@@ -222,7 +252,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "FAQ: Is Integral University campus Wi-Fi enabled? Answer: The official FAQ says the campus has Wi-Fi for students to connect to the internet."
+      "text": "FAQ: Is Integral University campus Wi-Fi enabled? Answer: The official FAQ says the campus has Wi-Fi for students to connect to the internet.",
+      "question": "Is Integral University campus Wi-Fi enabled?"
     },
     {
       "source": "Integral University official Admissions FAQ",
@@ -230,7 +261,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "FAQ: What is Integral University's policy on ragging? Answer: The official FAQ states that the university has a zero-tolerance policy for ragging within and outside the campus. For help or to report a concern, use the university's official student grievance channels."
+      "text": "FAQ: What is Integral University's policy on ragging? Answer: The official FAQ states that the university has a zero-tolerance policy for ragging within and outside the campus. For help or to report a concern, use the university's official student grievance channels.",
+      "question": "What is Integral University’s policy on ragging?"
     },
     {
       "source": "Integral University official Admissions FAQ",
@@ -238,7 +270,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "FAQ: How are hostel rooms allotted? Answer: The official FAQ says rooms are allotted on a first-come, first-served basis, subject to room availability and payment of hostel fees. Contact the hostel office to confirm current availability and procedure."
+      "text": "FAQ: How are hostel rooms allotted? Answer: The official FAQ says rooms are allotted on a first-come, first-served basis, subject to room availability and payment of hostel fees. Contact the hostel office to confirm current availability and procedure.",
+      "question": "How are hostel rooms allotted?"
     },
     {
       "source": "Integral University official Admissions FAQ",
@@ -246,7 +279,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "FAQ: Whom should a student contact about a hostel problem? Answer: The official FAQ says to inform the Chief Warden or Deputy Chief Hostel Warden. The university hostel page lists the Provost and wardens' contact details; check the linked page for current contacts."
+      "text": "FAQ: Whom should a student contact about a hostel problem? Answer: The official FAQ says to inform the Chief Warden or Deputy Chief Hostel Warden. The university hostel page lists the Provost and wardens' contact details; check the linked page for current contacts.",
+      "question": "Whom should a student contact about a hostel problem?"
     },
     {
       "source": "Integral University official Admissions FAQ (Hindi summary)",
@@ -254,7 +288,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "प्रश्न: क्या Integral University को UGC से मान्यता प्राप्त है? उत्तर: विश्वविद्यालय के FAQ के अनुसार Integral University को UGC Act, 1956 की Sections 2(f) और 12B के तहत मान्यता प्राप्त है।"
+      "text": "प्रश्न: क्या Integral University को UGC से मान्यता प्राप्त है? उत्तर: विश्वविद्यालय के FAQ के अनुसार Integral University को UGC Act, 1956 की Sections 2(f) और 12B के तहत मान्यता प्राप्त है।",
+      "question": "क्या Integral University को UGC से मान्यता प्राप्त है?"
     },
     {
       "source": "Integral University official Admissions FAQ (Hindi summary)",
@@ -262,7 +297,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "प्रश्न: University ID card कब मिलता है? उत्तर: विश्वविद्यालय FAQ के अनुसार registration के 10 दिन बाद; कार्ड संबंधित department या Academic section से जारी होता है।"
+      "text": "प्रश्न: University ID card कब मिलता है? उत्तर: विश्वविद्यालय FAQ के अनुसार registration के 10 दिन बाद; कार्ड संबंधित department या Academic section से जारी होता है।",
+      "question": "विद्यार्थियों को University ID card कब मिलता है?"
     },
     {
       "source": "Integral University official Admissions FAQ (Hindi summary)",
@@ -270,7 +306,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "प्रश्न: क्या Integral University के technical programs को AICTE approval चाहिए? उत्तर: विश्वविद्यालय FAQ कहता है कि विश्वविद्यालय U.P. Legislature के Act से स्थापित और UGC-recognized है, इसलिए उसे AICTE approval की आवश्यकता नहीं है। किसी विशेष program या regulatory प्रश्न की पुष्टि विश्वविद्यालय और संबंधित regulator से करें।"
+      "text": "प्रश्न: क्या Integral University के technical programs को AICTE approval चाहिए? उत्तर: विश्वविद्यालय FAQ कहता है कि विश्वविद्यालय U.P. Legislature के Act से स्थापित और UGC-recognized है, इसलिए उसे AICTE approval की आवश्यकता नहीं है। किसी विशेष program या regulatory प्रश्न की पुष्टि विश्वविद्यालय और संबंधित regulator से करें।",
+      "question": "क्या Integral University के technical programs को AICTE approval चाहिए?"
     },
     {
       "source": "Integral University official Admissions FAQ (Hindi summary)",
@@ -278,7 +315,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "प्रश्न: क्या admission के लिए entrance exam होता है? उत्तर: विश्वविद्यालय FAQ के अनुसार पात्र applicants को IUET देना होता है। JEE Main, UPSEE, UNI-GAUGE या किसी अन्य सरकारी/प्रमुख विश्वविद्यालय की परीक्षा देने वालों को विश्वविद्यालय के विवेक पर छूट मिल सकती है। वर्तमान नियम Admissions से जाँचें।"
+      "text": "प्रश्न: क्या admission के लिए entrance exam होता है? उत्तर: विश्वविद्यालय FAQ के अनुसार पात्र applicants को IUET देना होता है। JEE Main, UPSEE, UNI-GAUGE या किसी अन्य सरकारी/प्रमुख विश्वविद्यालय की परीक्षा देने वालों को विश्वविद्यालय के विवेक पर छूट मिल सकती है। वर्तमान नियम Admissions से जाँचें।",
+      "question": "क्या admission के लिए entrance exam होता है?"
     },
     {
       "source": "Integral University official Admissions FAQ (Hindi summary)",
@@ -286,7 +324,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "प्रश्न: क्या sports quota admission उपलब्ध है? उत्तर: आधिकारिक FAQ के अनुसार national, state या district स्तर पर खेल उपलब्धि वाले विद्यार्थी पात्र हो सकते हैं और qualifying exam marks में 5% छूट दी जाती है। वर्तमान पात्रता और दस्तावेज़ Admissions से जाँचें।"
+      "text": "प्रश्न: क्या sports quota admission उपलब्ध है? उत्तर: आधिकारिक FAQ के अनुसार national, state या district स्तर पर खेल उपलब्धि वाले विद्यार्थी पात्र हो सकते हैं और qualifying exam marks में 5% छूट दी जाती है। वर्तमान पात्रता और दस्तावेज़ Admissions से जाँचें।",
+      "question": "क्या Integral University में sports quota से admission मिलता है?"
     },
     {
       "source": "Integral University official Admissions FAQ (Hindi summary)",
@@ -294,7 +333,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "प्रश्न: क्या Integral University education loan में सहायता करता है? उत्तर: आधिकारिक FAQ के अनुसार deserving/meritorious विद्यार्थियों के लिए financial assistance हेतु सहयोग और admission counselling के समय bank kiosks की व्यवस्था है। वर्तमान जानकारी Admissions से लें; loan स्वीकृति की गारंटी नहीं है।"
+      "text": "प्रश्न: क्या Integral University education loan में सहायता करता है? उत्तर: आधिकारिक FAQ के अनुसार deserving/meritorious विद्यार्थियों के लिए financial assistance हेतु सहयोग और admission counselling के समय bank kiosks की व्यवस्था है। वर्तमान जानकारी Admissions से लें; loan स्वीकृति की गारंटी नहीं है।",
+      "question": "क्या Integral University education loan में सहायता करता है?"
     },
     {
       "source": "Integral University official Admissions FAQ (Hindi summary)",
@@ -302,7 +342,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "प्रश्न: क्या campus में Wi-Fi है? उत्तर: आधिकारिक FAQ कहता है कि विद्यार्थियों के internet उपयोग के लिए campus में Wi-Fi उपलब्ध है।"
+      "text": "प्रश्न: क्या campus में Wi-Fi है? उत्तर: आधिकारिक FAQ कहता है कि विद्यार्थियों के internet उपयोग के लिए campus में Wi-Fi उपलब्ध है।",
+      "question": "क्या Integral University campus में Wi-Fi उपलब्ध है?"
     },
     {
       "source": "Integral University official Admissions FAQ (Hindi summary)",
@@ -310,7 +351,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "प्रश्न: ragging पर विश्वविद्यालय की नीति क्या है? उत्तर: आधिकारिक FAQ के अनुसार campus के अंदर और बाहर ragging के प्रति zero-tolerance नीति है। सहायता या शिकायत के लिए विश्वविद्यालय के आधिकारिक student grievance channels का उपयोग करें।"
+      "text": "प्रश्न: ragging पर विश्वविद्यालय की नीति क्या है? उत्तर: आधिकारिक FAQ के अनुसार campus के अंदर और बाहर ragging के प्रति zero-tolerance नीति है। सहायता या शिकायत के लिए विश्वविद्यालय के आधिकारिक student grievance channels का उपयोग करें।",
+      "question": "Ragging पर Integral University की क्या नीति है?"
     },
     {
       "source": "Integral University official Admissions FAQ (Hindi summary)",
@@ -318,7 +360,8 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "प्रश्न: hostel rooms कैसे मिलते हैं? उत्तर: आधिकारिक FAQ के अनुसार कमरे पहले आओ, पहले पाओ आधार पर, उपलब्धता और hostel fee भुगतान के अधीन दिए जाते हैं। वर्तमान उपलब्धता और प्रक्रिया hostel office से पूछें।"
+      "text": "प्रश्न: hostel rooms कैसे मिलते हैं? उत्तर: आधिकारिक FAQ के अनुसार कमरे पहले आओ, पहले पाओ आधार पर, उपलब्धता और hostel fee भुगतान के अधीन दिए जाते हैं। वर्तमान उपलब्धता और प्रक्रिया hostel office से पूछें।",
+      "question": "Hostel rooms कैसे allot किए जाते हैं?"
     },
     {
       "source": "Integral University official Admissions FAQ (Hindi summary)",
@@ -326,49 +369,56 @@
       "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
       "verified_on": "2026-10-16",
       "language": "hi",
-      "text": "प्रश्न: hostel की समस्या किसे बतानी चाहिए? उत्तर: आधिकारिक FAQ के अनुसार Chief Warden या Deputy Chief Hostel Warden को बताएं। वर्तमान संपर्क विवरण के लिए linked hostel page देखें।"
+      "text": "प्रश्न: hostel की समस्या किसे बतानी चाहिए? उत्तर: आधिकारिक FAQ के अनुसार Chief Warden या Deputy Chief Hostel Warden को बताएं। वर्तमान संपर्क विवरण के लिए linked hostel page देखें।",
+      "question": "Hostel की समस्या होने पर किससे संपर्क करें?"
     },
     {
       "source": "Integral University official admissions process",
       "url": "https://www.iul.ac.in/admissions/index",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "Admissions: The official admissions page describes online and paper-based application routes. For the paper route, obtain the application form from campus and submit it to the Directorate of Admissions with the required documents. Check the current official admission portal for the active application process and deadlines."
+      "text": "Admissions: The official admissions page describes online and paper-based application routes. For the paper route, obtain the application form from campus and submit it to the Directorate of Admissions with the required documents. Check the current official admission portal for the active application process and deadlines.",
+      "question": "How do I apply for admission to Integral University?"
     },
     {
       "source": "Integral University official admissions process",
       "url": "https://www.iul.ac.in/admissions/index",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "Admission documents: The official admissions page lists High School and Intermediate mark sheets, graduation mark sheet if applicable, migration/transfer certificate, character certificate, passport-size photographs, Aadhaar Card, and NAD ID. The exact list can vary by program and applicant; verify current requirements with Admissions."
+      "text": "Admission documents: The official admissions page lists High School and Intermediate mark sheets, graduation mark sheet if applicable, migration/transfer certificate, character certificate, passport-size photographs, Aadhaar Card, and NAD ID. The exact list can vary by program and applicant; verify current requirements with Admissions.",
+      "question": "Which documents are listed for admission?"
     },
     {
       "source": "Integral University official admission criteria",
       "url": "https://www.iul.ac.in/admissioninfo/Admission_Criteria.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "Entrance requirements vary by program. The official admission criteria page says IUET-2026 applies to offered programs except B.Arch and MBBS/MD/MS; it gives separate entrance and counselling requirements for those programs. Verify current program-specific criteria directly on the official page before applying."
+      "text": "Entrance requirements vary by program. The official admission criteria page says IUET-2026 applies to offered programs except B.Arch and MBBS/MD/MS; it gives separate entrance and counselling requirements for those programs. Verify current program-specific criteria directly on the official page before applying.",
+      "question": "Do all programs require IUET?"
     },
     {
       "source": "Integral University official scholarship schemes",
       "url": "https://www.iul.ac.in/admissioninfo/Integral_University_Scholarships_Schemes.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "Scholarships: The official scholarship schemes page lists merit-based tuition waivers (100% at 90% or above, 50% at 85% or above, and 25% at 80% or above) and other schemes including sibling, alumni, staff, Jammu and Kashmir, North Eastern Region, progression, specially abled, adopted village, orphan, sports, means-based aid, and Integral Research Fellowship. The page says terms and conditions apply; eligibility, availability, and amounts must be confirmed with the Scholarship Cell."
+      "text": "Scholarships: The official scholarship schemes page lists merit-based tuition waivers (100% at 90% or above, 50% at 85% or above, and 25% at 80% or above) and other schemes including sibling, alumni, staff, Jammu and Kashmir, North Eastern Region, progression, specially abled, adopted village, orphan, sports, means-based aid, and Integral Research Fellowship. The page says terms and conditions apply; eligibility, availability, and amounts must be confirmed with the Scholarship Cell.",
+      "question": "What scholarships and tuition waivers does Integral University list?"
     },
     {
       "source": "Integral University official Student Grievance Redressal Committee",
       "url": "https://www.iul.ac.in/Student-Grievance-Redressal-Committee.aspx",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "Student grievance: The official Student Grievance Redressal Committee page says students may submit a written application in person or email sgrc@iul.ac.in. If dissatisfied with the committee's action, a student may seek redress through a complaint to the Ombudsperson. Check the official page for current procedure and committee information."
+      "text": "Student grievance: The official Student Grievance Redressal Committee page says students may submit a written application in person or email sgrc@iul.ac.in. If dissatisfied with the committee's action, a student may seek redress through a complaint to the Ombudsperson. Check the official page for current procedure and committee information.",
+      "question": "How can I submit a student grievance?"
     },
     {
       "source": "Integral University official hostel facility page",
       "url": "https://www.iul.ac.in/admissions/Hostel_Facility",
       "verified_on": "2026-10-16",
       "language": "en",
-      "text": "Hostel support and facilities: The official hostel page lists boys' hostel enquiry at +91 8881103500 and girls' hostel enquiry at +91 8881103400. It describes separate boys' and girls' hostels, Wi-Fi, dining, study and reading spaces, common rooms, sports facilities, and wardens. Contact the hostel office for current availability, fees, and allocation."
+      "text": "Hostel support and facilities: The official hostel page lists boys' hostel enquiry at +91 8881103500 and girls' hostel enquiry at +91 8881103400. It describes separate boys' and girls' hostels, Wi-Fi, dining, study and reading spaces, common rooms, sports facilities, and wardens. Contact the hostel office for current availability, fees, and allocation.",
+      "question": "How do I contact hostel support, and what facilities are listed?"
     }
   ]
 }

@@ -1,3 +1,4 @@
+import html
 import json
 import os
 import base64
@@ -85,6 +86,15 @@ st.markdown(
       [data-testid="stChatInput"] textarea::placeholder { color: #64736f !important; opacity: 1 !important; font-weight: 550; }
       [data-testid="stChatInputSubmitButton"] { background: #137c68 !important; color: #ffffff !important; border-radius: 12px !important; }
       [data-testid="stChatInputSubmitButton"]:hover { background: #105f51 !important; transform: translateY(-1px); }
+      .faq-card { border: 1px solid #dce7e3; border-radius: 14px; background: rgba(255,255,255,.94); margin: .5rem 0; overflow: hidden; }
+      .faq-card summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; list-style: none; cursor: pointer; padding: .9rem 1rem; color: #183b36; font-weight: 650; }
+      .faq-card summary::-webkit-details-marker { display: none; }
+      .faq-card summary::after { content: "+"; flex: 0 0 1.8rem; width: 1.8rem; height: 1.8rem; display: grid; place-items: center; border: 1px solid #a8d2c5; border-radius: 50%; color: #137c68; font-size: 1.25rem; line-height: 1; }
+      .faq-card[open] summary { background: #edf7f3; }
+      .faq-card[open] summary::after { content: "−"; }
+      .faq-answer { border-top: 1px solid #dce7e3; padding: .9rem 1rem 1rem; color: #314b45; line-height: 1.6; }
+      .faq-meta { color: #64736f; font-size: .78rem; margin-top: .7rem; }
+      .faq-meta a { color: #137c68; font-weight: 650; }
       .evidence-text { color: #314b45; line-height: 1.55; font-size: .94rem; }
       .voice-note { color: var(--saarthi-muted); font-size: .84rem; margin-top: -.4rem; }
       .saarthi-watermark { position: fixed; width: min(54vw, 560px); height: min(54vw, 560px); left: 50%; top: 55%; transform: translate(-50%, -50%); background-position: center; background-repeat: no-repeat; background-size: contain; opacity: .035; filter: grayscale(1); pointer-events: none; z-index: 0; }
@@ -275,6 +285,88 @@ def render_notice_reader():
                     st.caption("The result is based only on this photo; it is not verified against a live university source.")
 
 
+def _faq_answer_text(item):
+    text = item["text"]
+    if text.startswith("FAQ: ") and " Answer: " in text:
+        return text.split(" Answer: ", 1)[1]
+    if text.startswith("प्रश्न: ") and " उत्तर: " in text:
+        return text.split(" उत्तर: ", 1)[1]
+    return text
+
+
+def render_faq_browser():
+    st.markdown("### Browse all FAQs")
+    st.caption("Open a question with the plus button to read its answer and source. Use the search box below for anything not listed here.")
+    language_labels = {"All languages": None, "English": "en", "हिन्दी": "hi"}
+    filter_columns = st.columns([1, 2])
+    with filter_columns[0]:
+        selected_language = st.selectbox(
+            "FAQ language",
+            list(language_labels),
+            key="faq_browse_language",
+            label_visibility="collapsed",
+        )
+    with filter_columns[1]:
+        search_query = st.text_input(
+            "Search FAQs",
+            placeholder="Search the FAQ list…",
+            key="faq_browse_search",
+            label_visibility="collapsed",
+        )
+    language_code = language_labels[selected_language]
+    faq_items = [
+        item for item in documents
+        if item.get("question") and (language_code is None or item.get("language") == language_code)
+    ]
+    if selected_language == "All languages":
+        faq_items.sort(key=lambda item: 0 if item.get("language") == "en" else 1)
+    if search_query.strip():
+        query = search_query.strip().casefold()
+        faq_items = [
+            item for item in faq_items
+            if query in item["question"].casefold() or query in item["text"].casefold()
+        ]
+    total = len(faq_items)
+    if "faq_visible_count" not in st.session_state:
+        st.session_state.faq_visible_count = 10
+    st.caption(f"{total} questions available · {selected_language}")
+    if not faq_items:
+        st.info("No FAQ matched that search. Try another phrase or use the campus question box below.")
+        return
+    visible_count = min(st.session_state.faq_visible_count, total)
+    for item in faq_items[:visible_count]:
+        question = html.escape(item["question"])
+        answer = html.escape(_faq_answer_text(item)).replace("\n", "<br>")
+        source = html.escape(source_label(item))
+        source_link = ""
+        if item.get("url"):
+            url = html.escape(item["url"], quote=True)
+            source_link = f' · <a href="{url}" target="_blank" rel="noopener noreferrer">Open official source ↗</a>'
+        checked = html.escape(freshness_label(item.get("verified_on")))
+        st.markdown(
+            f'<details class="faq-card"><summary>{question}</summary>'
+            f'<div class="faq-answer">{answer}'
+            f'<div class="faq-meta">{source} · {checked}{source_link}</div></div></details>',
+            unsafe_allow_html=True,
+        )
+
+    if total > 10:
+        more, all_button, fewer = st.columns(3)
+        if visible_count < total:
+            with more:
+                if st.button("Show 10 more", key="faq_show_more", use_container_width=True):
+                    st.session_state.faq_visible_count = min(visible_count + 10, total)
+                    st.rerun()
+            with all_button:
+                if st.button(f"Show all {total}", key="faq_show_all", use_container_width=True):
+                    st.session_state.faq_visible_count = total
+                    st.rerun()
+        if visible_count > 10:
+            with fewer:
+                if st.button("Show fewer", key="faq_show_fewer", use_container_width=True):
+                    st.session_state.faq_visible_count = 10
+                    st.rerun()
+
 def render_chat():
     if "messages" not in st.session_state:
         st.session_state.messages = []
@@ -316,6 +408,8 @@ def render_chat():
         with column:
             if st.button(suggestion, key=f"suggestion_{index}", use_container_width=True):
                 st.session_state.pending_question = suggestion
+
+    render_faq_browser()
 
     voice_result = voice_tools(
         mode="listen",

@@ -29,6 +29,7 @@ def load_documents(data):
             valid.append(
                 {
                     "text": text,
+                    "question": str(item.get("question", "")).strip() or None,
                     "source": source,
                     "page": item.get("page"),
                     "url": str(item.get("url", "")).strip() or None,
@@ -58,7 +59,7 @@ def search_documents(query, documents, limit=3, language=None):
     ]
     if not eligible:
         eligible = documents
-    doc_tokens = [tokenize(item["text"]) for item in eligible]
+    doc_tokens = [tokenize((item.get("question") or "") + " " + item["text"]) for item in eligible]
     document_frequency = {}
     for tokens in doc_tokens:
         for term in set(tokens):
