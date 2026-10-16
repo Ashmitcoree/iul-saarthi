@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: iul-saarthi
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.address 0.0.0.0 --server.port $PORT --server.headless true
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: AI_BACKEND
+        value: gemma_api
+      - key: GEMMA_API_MODEL
+        value: gemma-4-26b-a4b-it
+      - key: GEMMA_API_KEY
+        sync: false

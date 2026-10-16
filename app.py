@@ -6,7 +6,7 @@ from datetime import date, datetime
 
 import streamlit as st
 
-from agent import answer_question
+from agent import AI_BACKEND, answer_question, read_notice_image
 from retrieval import load_documents, source_label
 
 
@@ -117,7 +117,7 @@ st.markdown(
         </div>
       </div>
       <p class="saarthi-subtitle">Campus answers grounded in the information available to the assistant.</p>
-      <span class="saarthi-badge">✦ Gemma 4 E2B · running locally with Ollama</span>
+      <span class="saarthi-badge">✦ {"Hosted Gemma 4 · Google AI API" if AI_BACKEND == "gemma_api" else "Gemma 4 E2B · local Ollama"}</span>
     </section>
     """,
     unsafe_allow_html=True,
@@ -162,12 +162,68 @@ with st.sidebar:
     st.markdown("### About this demo")
     st.caption("IUL Saarthi searches its local knowledge base, checks for evidence, then asks Gemma to draft a grounded answer.")
     st.divider()
-    st.markdown("**Local AI setup**")
-    st.write("Gemma 4 E2B · Ollama")
+    st.markdown("**AI setup**")
+    st.write("Hosted Gemma 4 · Google AI API" if AI_BACKEND == "gemma_api" else "Gemma 4 E2B · local Ollama")
     st.write(f"{len(documents)} information passages indexed")
     st.caption("Questions without supporting information receive a clear fallback.")
     reply_language = st.selectbox("Reply language", ["Auto", "English", "Hindi"], index=0)
     st.caption("Auto follows Hindi written in Devanagari; choose Hindi for other Hindi input.")
+
+
+st.markdown("### Turn a campus notice into next steps")
+st.caption(
+    "Upload a clear notice photo. Saarthi reads it with the configured Gemma service and makes a checklist. "
+    "The image is used for this analysis and is not added to the shared campus knowledge base."
+)
+if AI_BACKEND == "gemma_api":
+    st.info("Cloud mode sends the uploaded image to Google’s Gemma API for processing. Use public notices; avoid images with private student information.")
+notice_image = st.file_uploader(
+    "Choose a notice image",
+    type=["png", "jpg", "jpeg", "webp"],
+    accept_multiple_files=False,
+    help="Use a clear, well-lit photo. PNG, JPG, and WebP images up to 8 MB are supported.",
+    key="notice_image_upload",
+)
+if notice_image is not None:
+    image_bytes = notice_image.getvalue()
+    if len(image_bytes) > 8 * 1024 * 1024:
+        st.error("That image is over 8 MB. Please choose a smaller image.")
+    else:
+        st.image(image_bytes, caption="Photo selected for this analysis", use_container_width=True)
+        if st.button("Read notice and make checklist", type="primary", key="read_notice"):
+            with st.spinner("Reading the image with Gemma…"):
+                notice_result = read_notice_image(image_bytes, notice_image.type or "image/jpeg", reply_language)
+            if notice_result.get("error"):
+                st.error(
+                    "I couldn’t read this image. Check that the configured Gemma service is available and supports image input, "
+                    "then try a clear PNG, JPG, or WebP photo."
+                )
+                st.caption(notice_result["error"])
+            elif notice_result["kind"] == "unrelated":
+                st.info("I couldn’t find a campus notice in this image. Try a university notice, poster, or form.")
+            elif notice_result["kind"] == "unclear":
+                st.warning("I couldn’t reliably read this image. Try a sharper, brighter photo with the full notice visible.")
+                if notice_result.get("transcription"):
+                    with st.expander("Text I could make out"):
+                        st.text(notice_result["transcription"])
+            else:
+                st.success("Notice read. Please compare the checklist with the original notice before acting.")
+                if notice_result.get("actions"):
+                    st.markdown("**Your checklist**")
+                    for item in notice_result["actions"]:
+                        st.text(f"☐ {item['action']}")
+                        st.caption("Source text from the photo:")
+                        st.text(item["source_quote"])
+                else:
+                    st.info("I read the notice, but couldn’t verify any clear action items from its text.")
+                if notice_result.get("unclear"):
+                    st.markdown("**Please confirm these unclear details**")
+                    for detail in notice_result["unclear"]:
+                        st.text(f"• {detail}")
+                if notice_result.get("transcription"):
+                    with st.expander("Text read from the image"):
+                        st.text(notice_result["transcription"])
+                st.caption("The result is based only on this photo; it is not verified against a live university source.")
 
 
 def render_evidence(evidence):
