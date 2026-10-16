@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, sans-serif; color: #183b36; }
+      .row { display: flex; align-items: center; gap: 10px; min-height: 54px; }
+      button { border: 1px solid #c8ddd6; border-radius: 12px; background: #fff; color: #183b36; padding: 10px 14px; font-size: 15px; font-weight: 650; cursor: pointer; }
+      button:hover { background: #e7f4ef; border-color: #75b9a5; }
+      button:focus-visible { outline: 3px solid #137c68; outline-offset: 2px; }
+      button[aria-pressed="true"] { color: #fff; background: #137c68; border-color: #137c68; }
+      #status { color: #64736f; font-size: 13px; }
+      .speak { min-height: 38px; padding: 7px 11px; font-size: 14px; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const root = document.getElementById("root");
+      let currentArgs = {};
+      let recognition = null;
+
+      function post(type, extra = {}) {
+        window.parent.postMessage({ isStreamlitMessage: true, type, ...extra }, "*");
+      }
+
+      function render(args) {
+        currentArgs = args || {};
+        root.replaceChildren();
+
+        if (currentArgs.mode === "speak") {
+          const button = document.createElement("button");
+          button.className = "speak";
+          button.type = "button";
+          button.textContent = "🔊 Read aloud";
+          button.setAttribute("aria-label", "Read this answer aloud");
+          let speaking = false;
+          button.addEventListener("click", () => {
+            if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+              button.textContent = "Speech unavailable";
+              return;
+            }
+            if (speaking) {
+              window.speechSynthesis.cancel();
+              speaking = false;
+              button.textContent = "🔊 Read aloud";
+              return;
+            }
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(currentArgs.text || "");
+            utterance.lang = currentArgs.language || "en-IN";
+            utterance.onend = () => { speaking = false; button.textContent = "🔊 Read aloud"; };
+            utterance.onerror = () => { speaking = false; button.textContent = "Could not play · try again"; };
+            speaking = true;
+            button.textContent = "⏹ Stop reading";
+            window.speechSynthesis.speak(utterance);
+          });
+          root.appendChild(button);
+          post("streamlit:setFrameHeight", { height: 48 });
+          return;
+        }
+
+        const row = document.createElement("div");
+        row.className = "row";
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = "🎙️ Ask by voice";
+        button.setAttribute("aria-pressed", "false");
+        button.setAttribute("aria-label", "Start voice question");
+        const status = document.createElement("span");
+        status.id = "status";
+        button.addEventListener("click", () => {
+          const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+          if (!SpeechRecognition) {
+            status.textContent = "Voice input isn’t supported in this browser. Try Chrome or Edge, or type your question.";
+            return;
+          }
+          if (recognition) {
+            recognition.stop();
+            recognition = null;
+            button.setAttribute("aria-pressed", "false");
+            button.textContent = "🎙️ Ask by voice";
+            status.textContent = "Voice input stopped.";
+            return;
+          }
+          recognition = new SpeechRecognition();
+          recognition.lang = currentArgs.language || "en-IN";
+          recognition.continuous = false;
+          recognition.interimResults = false;
+          recognition.maxAlternatives = 1;
+          button.setAttribute("aria-pressed", "true");
+          button.textContent = "Listening… tap to stop";
+          status.textContent = "Speak your question now.";
+          recognition.onresult = (event) => {
+            const transcript = event.results?.[0]?.[0]?.transcript?.trim();
+            if (transcript) {
+              status.textContent = `Heard: ${transcript}`;
+              post("streamlit:setComponentValue", {
+                value: { text: transcript, id: `${Date.now()}-${Math.random()}` },
+                dataType: "json",
+              });
+            }
+          };
+          recognition.onerror = (event) => {
+            const messages = {
+              "not-allowed": "Microphone access was blocked. Allow it in your browser, or type your question.",
+              "no-speech": "I didn’t hear speech. Tap the microphone and try again.",
+              "network": "The browser speech service is unavailable. Try again or type your question.",
+            };
+            status.textContent = messages[event.error] || "Voice input had a problem. Please try again or type your question.";
+          };
+          recognition.onend = () => {
+            recognition = null;
+            button.setAttribute("aria-pressed", "false");
+            button.textContent = "🎙️ Ask by voice";
+          };
+          try {
+            recognition.start();
+          } catch (error) {
+            status.textContent = "Could not start the microphone. Check browser permissions and try again.";
+            recognition = null;
+            button.setAttribute("aria-pressed", "false");
+            button.textContent = "🎙️ Ask by voice";
+          }
+        });
+        row.append(button, status);
+        root.appendChild(row);
+        post("streamlit:setFrameHeight", { height: 58 });
+      }
+
+      window.addEventListener("message", (event) => {
+        if (event.data?.type === "streamlit:render") render(event.data.args);
+      });
+      post("streamlit:componentReady", { apiVersion: 1 });
+      post("streamlit:setFrameHeight", { height: 58 });
+    </script>
+  </body>
+</html>

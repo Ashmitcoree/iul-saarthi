@@ -5,6 +5,7 @@ import mimetypes
 from datetime import date, datetime
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 from agent import AI_BACKEND, answer_question, read_notice_image
 from retrieval import load_documents, source_label
@@ -13,6 +14,8 @@ from retrieval import load_documents, source_label
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(APP_DIR, "data", "campus_faq.json")
 OFFICES_PATH = os.path.join(APP_DIR, "data", "campus_offices.json")
+VOICE_COMPONENT_PATH = os.path.join(APP_DIR, "voice_component")
+voice_tools = components.declare_component("iul_saarthi_voice", path=VOICE_COMPONENT_PATH)
 
 st.set_page_config(
     page_title="IUL Saarthi | Campus Guide",
@@ -81,6 +84,7 @@ st.markdown(
       [data-testid="stChatInput"] textarea { color: #183b36 !important; }
       [data-testid="stChatInput"] textarea::placeholder { color: #64736f !important; opacity: 1 !important; }
       .evidence-text { color: #314b45; line-height: 1.55; font-size: .94rem; }
+      .voice-note { color: var(--saarthi-muted); font-size: .84rem; margin-top: -.4rem; }
       @media (max-width: 640px) {
         .saarthi-hero { padding: 1.25rem; border-radius: 17px; }
         .saarthi-title { font-size: 1.9rem; }
@@ -260,6 +264,18 @@ for message_index, message in enumerate(st.session_state.messages):
         if message.get("evidence"):
             render_evidence(message["evidence"])
         if message["role"] == "assistant":
+            voice_tools(
+                mode="speak",
+                text=message["content"],
+                language=(
+                    "hi-IN"
+                    if reply_language == "Hindi"
+                    or (reply_language == "Auto" and any("\u0900" <= char <= "\u097f" for char in message["content"]))
+                    else "en-IN"
+                ),
+                key=f"speak_answer_{message_index}",
+                default=None,
+            )
             render_feedback(message_index)
 
 st.markdown("<div class='saarthi-section-label'>Try a question</div>", unsafe_allow_html=True)
@@ -274,7 +290,48 @@ for index, (column, suggestion) in enumerate(zip(columns, suggestions)):
         if st.button(suggestion, key=f"suggestion_{index}", use_container_width=True):
             st.session_state.pending_question = suggestion
 
+voice_result = voice_tools(
+    mode="listen",
+    language=("hi-IN" if reply_language == "Hindi" else "en-IN"),
+    key="voice_question_input",
+    default=None,
+)
+if isinstance(voice_result, dict) and voice_result.get("text"):
+    if voice_result.get("id") != st.session_state.get("last_voice_id"):
+        st.session_state.last_voice_id = voice_result.get("id")
+        st.session_state.voice_draft = {
+            "id": voice_result.get("id"),
+            "text": voice_result["text"].strip(),
+        }
+st.markdown(
+    "<div class='voice-note'>Voice input uses your browser’s speech service after you tap the microphone. "
+    "IUL Saarthi does not save audio. You can type instead.</div>",
+    unsafe_allow_html=True,
+)
+
+voice_question = None
+if st.session_state.get("voice_draft"):
+    draft = st.session_state.voice_draft
+    with st.form(f"voice_review_{draft['id']}"):
+        edited_transcript = st.text_input(
+            "Review or edit what I heard",
+            value=draft["text"],
+            key=f"voice_review_text_{draft['id']}",
+        )
+        ask_column, discard_column = st.columns(2)
+        with ask_column:
+            ask_voice = st.form_submit_button("Ask Saarthi", type="primary", use_container_width=True)
+        with discard_column:
+            discard_voice = st.form_submit_button("Discard", use_container_width=True)
+    if ask_voice and edited_transcript.strip():
+        voice_question = edited_transcript.strip()
+        st.session_state.voice_draft = None
+    elif discard_voice:
+        st.session_state.voice_draft = None
+
 question = st.chat_input("हैक डे या विश्वविद्यालय के बारे में पूछें" if reply_language == "Hindi" else "Ask about Hack Day or university information")
+if not question:
+    question = voice_question
 if st.session_state.pending_question:
     question = st.session_state.pending_question
     st.session_state.pending_question = None
