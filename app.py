@@ -295,77 +295,88 @@ def _faq_answer_text(item):
 
 
 def render_faq_browser():
-    st.markdown("### Browse all FAQs")
-    st.caption("Open a question with the plus button to read its answer and source. Use the search box below for anything not listed here.")
-    language_labels = {"All languages": None, "English": "en", "हिन्दी": "hi"}
-    filter_columns = st.columns([1, 2])
-    with filter_columns[0]:
-        selected_language = st.selectbox(
-            "FAQ language",
-            list(language_labels),
-            key="faq_browse_language",
-            label_visibility="collapsed",
+    st.markdown("### Campus questions")
+    st.caption("Choose a question card to open its answer below. Use the arrows to move through the slides, or show the full list.")
+    st.caption("The university-wide admissions FAQ contains ten questions; the other cards are curated from linked public pages and team-provided Hack Day information.")
+    faq_items = [item for item in documents if item.get("question")]
+    faq_items.sort(
+        key=lambda item: (
+            0 if "official Admissions FAQ" in item.get("source", "") and item.get("language") == "en"
+            else 1 if item.get("language") == "en"
+            else 2 if "official Admissions FAQ" in item.get("source", "")
+            else 3
         )
-    with filter_columns[1]:
-        search_query = st.text_input(
-            "Search FAQs",
-            placeholder="Search the FAQ list…",
-            key="faq_browse_search",
-            label_visibility="collapsed",
-        )
-    language_code = language_labels[selected_language]
-    faq_items = [
-        item for item in documents
-        if item.get("question") and (language_code is None or item.get("language") == language_code)
-    ]
-    if selected_language == "All languages":
-        faq_items.sort(key=lambda item: 0 if item.get("language") == "en" else 1)
-    if search_query.strip():
-        query = search_query.strip().casefold()
-        faq_items = [
-            item for item in faq_items
-            if query in item["question"].casefold() or query in item["text"].casefold()
-        ]
+    )
     total = len(faq_items)
-    if "faq_visible_count" not in st.session_state:
-        st.session_state.faq_visible_count = 10
-    st.caption(f"{total} questions available · {selected_language}")
     if not faq_items:
-        st.info("No FAQ matched that search. Try another phrase or use the campus question box below.")
+        st.info("No campus questions are available yet.")
         return
-    visible_count = min(st.session_state.faq_visible_count, total)
-    for item in faq_items[:visible_count]:
-        question = html.escape(item["question"])
-        answer = html.escape(_faq_answer_text(item)).replace("\n", "<br>")
-        source = html.escape(source_label(item))
-        source_link = ""
-        if item.get("url"):
-            url = html.escape(item["url"], quote=True)
-            source_link = f' · <a href="{url}" target="_blank" rel="noopener noreferrer">Open official source ↗</a>'
-        checked = html.escape(freshness_label(item.get("verified_on")))
+
+    page_size = 6
+    page_count = (total + page_size - 1) // page_size
+    if "faq_slide" not in st.session_state:
+        st.session_state.faq_slide = 0
+    st.session_state.faq_slide = min(max(st.session_state.faq_slide, 0), page_count - 1)
+    if "faq_show_all" not in st.session_state:
+        st.session_state.faq_show_all = False
+
+    toggle_label = "Back to slides" if st.session_state.faq_show_all else f"Show all {total} questions"
+    if st.button(toggle_label, key="faq_toggle_all", use_container_width=False):
+        st.session_state.faq_show_all = not st.session_state.faq_show_all
+        st.session_state.faq_selected_question = None
+        st.rerun()
+
+    if st.session_state.faq_show_all:
+        visible_items = list(enumerate(faq_items))
+        st.caption(f"All {total} campus questions")
+    else:
+        first = st.session_state.faq_slide * page_size
+        last = min(first + page_size, total)
+        visible_items = list(enumerate(faq_items[first:last], start=first))
+        st.caption(f"Slide {st.session_state.faq_slide + 1} of {page_count} · questions {first + 1}–{last} of {total}")
+
+    for row_start in range(0, len(visible_items), 3):
+        row = visible_items[row_start:row_start + 3]
+        columns = st.columns(3)
+        for column, (item_index, item) in zip(columns, row):
+            with column:
+                if st.button(
+                    f"＋  {item['question']}",
+                    key=f"faq_question_{item_index}",
+                    use_container_width=True,
+                ):
+                    st.session_state.faq_selected_question = item_index
+                    st.rerun()
+
+    selected_index = st.session_state.get("faq_selected_question")
+    if selected_index is not None and 0 <= selected_index < total:
+        selected_item = faq_items[selected_index]
+        st.markdown("#### " + html.escape(selected_item["question"]))
         st.markdown(
-            f'<details class="faq-card"><summary>{question}</summary>'
-            f'<div class="faq-answer">{answer}'
-            f'<div class="faq-meta">{source} · {checked}{source_link}</div></div></details>',
+            f'<div class="faq-answer">{html.escape(_faq_answer_text(selected_item)).replace(chr(10), "<br>")}</div>',
             unsafe_allow_html=True,
         )
+        source_line = f"**Source:** {source_label(selected_item)}"
+        if selected_item.get("verified_on"):
+            source_line += f" · {freshness_label(selected_item['verified_on'])}"
+        st.caption(source_line)
+        if selected_item.get("url"):
+            st.markdown(f"[Open source ↗]({selected_item['url']})")
 
-    if total > 10:
-        more, all_button, fewer = st.columns(3)
-        if visible_count < total:
-            with more:
-                if st.button("Show 10 more", key="faq_show_more", use_container_width=True):
-                    st.session_state.faq_visible_count = min(visible_count + 10, total)
-                    st.rerun()
-            with all_button:
-                if st.button(f"Show all {total}", key="faq_show_all", use_container_width=True):
-                    st.session_state.faq_visible_count = total
-                    st.rerun()
-        if visible_count > 10:
-            with fewer:
-                if st.button("Show fewer", key="faq_show_fewer", use_container_width=True):
-                    st.session_state.faq_visible_count = 10
-                    st.rerun()
+    if not st.session_state.faq_show_all and page_count > 1:
+        previous, counter, next_slide = st.columns([1, 2, 1])
+        with previous:
+            if st.button("← Previous", key="faq_previous", disabled=st.session_state.faq_slide == 0, use_container_width=True):
+                st.session_state.faq_slide -= 1
+                st.session_state.faq_selected_question = None
+                st.rerun()
+        with counter:
+            st.markdown(f"<div style='text-align:center;padding:.6rem'>Slide {st.session_state.faq_slide + 1} / {page_count}</div>", unsafe_allow_html=True)
+        with next_slide:
+            if st.button("Next →", key="faq_next", disabled=st.session_state.faq_slide >= page_count - 1, use_container_width=True):
+                st.session_state.faq_slide += 1
+                st.session_state.faq_selected_question = None
+                st.rerun()
 
 def render_chat():
     if "messages" not in st.session_state:
