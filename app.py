@@ -135,9 +135,9 @@ st.markdown(
 )
 
 st.info(
-    "**Prototype knowledge base:** team-provided Hack Day details plus short guides to official university pages. "
-    "The checked dates are recorded by the project team, not updated automatically. "
-    "It does not sync live notices or student records and is not an official university service."
+    "**Prototype university knowledge base:** a curated snapshot of public Integral University FAQs and student-support pages, plus team-provided Hack Day details. "
+    "Official sources are linked and dated, but this dataset does not auto-sync or connect to student records. "
+    "Verify changing policies, fees, and deadlines on the linked university pages. This is not an official university service."
 )
 
 

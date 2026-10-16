@@ -1,5 +1,5 @@
 {
-  "knowledge_base_notice": "This demo contains team-provided Hack Day details and short summaries that link to official university pages. It is not an official university knowledge base and does not continuously sync live information.",
+  "knowledge_base_notice": "A curated prototype knowledge base built from team-provided Hack Day details and selected public Integral University pages. It is not connected to university student systems and does not automatically sync; verify changing policies, fees, deadlines, and contacts on the linked official pages.",
   "documents": [
     {
       "source": "Team-provided Hack Day event information",
@@ -167,7 +167,208 @@
       "verified_on": "2026-10-16",
       "language": "hi",
       "text": "Hostel से जुड़ी पूछताछ के लिए विश्वविद्यालय के आधिकारिक hostel पेज पर boys hostel का नंबर +91 8881103500 और girls hostel का नंबर +91 8881103400 दिया गया है। पेज पर कार्यालय का कमरा नहीं दिया गया; आने से पहले रास्ते के लिए फोन करें।"
+    },
+    {
+      "source": "Integral University official Admissions FAQ",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "FAQ: Is Integral University recognized by UGC? Answer: The university FAQ states that Integral University is recognized by UGC under Sections 2(f) and 12B of the UGC Act, 1956."
+    },
+    {
+      "source": "Integral University official Admissions FAQ",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "FAQ: When do students receive their University ID card? Answer: The university FAQ says it takes 10 days after registration; the card is issued by the student's respective department or the Academic section."
+    },
+    {
+      "source": "Integral University official Admissions FAQ",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "FAQ: Are Integral University technical programs approved by AICTE? Answer: The university FAQ states that Integral University was established through an Act of the Uttar Pradesh Legislature and is recognized by UGC, and says it does not require AICTE approval. For a specific program or regulatory question, confirm directly with the university and the relevant regulator."
+    },
+    {
+      "source": "Integral University official Admissions FAQ",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "FAQ: Is there an entrance exam for admission? Answer: The university FAQ says eligible applicants are required to take IUET (Integral University Entrance Test). Applicants who have qualified JEE Main, UPSEE, UNI-GAUGE, or another government/prominent university entrance exam may be exempt at the university's discretion. Confirm current program requirements with Admissions."
+    },
+    {
+      "source": "Integral University official Admissions FAQ",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "FAQ: Does Integral University offer admission under a sports quota? Answer: The official FAQ says students with national-, state-, or district-level sporting achievements may be eligible and that the university offers a 5% relaxation in qualifying-exam marks. Confirm current eligibility and evidence requirements with Admissions."
+    },
+    {
+      "source": "Integral University official Admissions FAQ",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "FAQ: Does Integral University provide education-loan assistance? Answer: The official FAQ says the university supports deserving/meritorious students seeking financial assistance and arranges bank kiosks during admission counselling. Contact Admissions for current details; this does not guarantee loan approval."
+    },
+    {
+      "source": "Integral University official Admissions FAQ",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "FAQ: Is Integral University campus Wi-Fi enabled? Answer: The official FAQ says the campus has Wi-Fi for students to connect to the internet."
+    },
+    {
+      "source": "Integral University official Admissions FAQ",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "FAQ: What is Integral University's policy on ragging? Answer: The official FAQ states that the university has a zero-tolerance policy for ragging within and outside the campus. For help or to report a concern, use the university's official student grievance channels."
+    },
+    {
+      "source": "Integral University official Admissions FAQ",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "FAQ: How are hostel rooms allotted? Answer: The official FAQ says rooms are allotted on a first-come, first-served basis, subject to room availability and payment of hostel fees. Contact the hostel office to confirm current availability and procedure."
+    },
+    {
+      "source": "Integral University official Admissions FAQ",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "FAQ: Whom should a student contact about a hostel problem? Answer: The official FAQ says to inform the Chief Warden or Deputy Chief Hostel Warden. The university hostel page lists the Provost and wardens' contact details; check the linked page for current contacts."
+    },
+    {
+      "source": "Integral University official Admissions FAQ (Hindi summary)",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "प्रश्न: क्या Integral University को UGC से मान्यता प्राप्त है? उत्तर: विश्वविद्यालय के FAQ के अनुसार Integral University को UGC Act, 1956 की Sections 2(f) और 12B के तहत मान्यता प्राप्त है।"
+    },
+    {
+      "source": "Integral University official Admissions FAQ (Hindi summary)",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "प्रश्न: University ID card कब मिलता है? उत्तर: विश्वविद्यालय FAQ के अनुसार registration के 10 दिन बाद; कार्ड संबंधित department या Academic section से जारी होता है।"
+    },
+    {
+      "source": "Integral University official Admissions FAQ (Hindi summary)",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "प्रश्न: क्या Integral University के technical programs को AICTE approval चाहिए? उत्तर: विश्वविद्यालय FAQ कहता है कि विश्वविद्यालय U.P. Legislature के Act से स्थापित और UGC-recognized है, इसलिए उसे AICTE approval की आवश्यकता नहीं है। किसी विशेष program या regulatory प्रश्न की पुष्टि विश्वविद्यालय और संबंधित regulator से करें।"
+    },
+    {
+      "source": "Integral University official Admissions FAQ (Hindi summary)",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "प्रश्न: क्या admission के लिए entrance exam होता है? उत्तर: विश्वविद्यालय FAQ के अनुसार पात्र applicants को IUET देना होता है। JEE Main, UPSEE, UNI-GAUGE या किसी अन्य सरकारी/प्रमुख विश्वविद्यालय की परीक्षा देने वालों को विश्वविद्यालय के विवेक पर छूट मिल सकती है। वर्तमान नियम Admissions से जाँचें।"
+    },
+    {
+      "source": "Integral University official Admissions FAQ (Hindi summary)",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "प्रश्न: क्या sports quota admission उपलब्ध है? उत्तर: आधिकारिक FAQ के अनुसार national, state या district स्तर पर खेल उपलब्धि वाले विद्यार्थी पात्र हो सकते हैं और qualifying exam marks में 5% छूट दी जाती है। वर्तमान पात्रता और दस्तावेज़ Admissions से जाँचें।"
+    },
+    {
+      "source": "Integral University official Admissions FAQ (Hindi summary)",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "प्रश्न: क्या Integral University education loan में सहायता करता है? उत्तर: आधिकारिक FAQ के अनुसार deserving/meritorious विद्यार्थियों के लिए financial assistance हेतु सहयोग और admission counselling के समय bank kiosks की व्यवस्था है। वर्तमान जानकारी Admissions से लें; loan स्वीकृति की गारंटी नहीं है।"
+    },
+    {
+      "source": "Integral University official Admissions FAQ (Hindi summary)",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "प्रश्न: क्या campus में Wi-Fi है? उत्तर: आधिकारिक FAQ कहता है कि विद्यार्थियों के internet उपयोग के लिए campus में Wi-Fi उपलब्ध है।"
+    },
+    {
+      "source": "Integral University official Admissions FAQ (Hindi summary)",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "प्रश्न: ragging पर विश्वविद्यालय की नीति क्या है? उत्तर: आधिकारिक FAQ के अनुसार campus के अंदर और बाहर ragging के प्रति zero-tolerance नीति है। सहायता या शिकायत के लिए विश्वविद्यालय के आधिकारिक student grievance channels का उपयोग करें।"
+    },
+    {
+      "source": "Integral University official Admissions FAQ (Hindi summary)",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "प्रश्न: hostel rooms कैसे मिलते हैं? उत्तर: आधिकारिक FAQ के अनुसार कमरे पहले आओ, पहले पाओ आधार पर, उपलब्धता और hostel fee भुगतान के अधीन दिए जाते हैं। वर्तमान उपलब्धता और प्रक्रिया hostel office से पूछें।"
+    },
+    {
+      "source": "Integral University official Admissions FAQ (Hindi summary)",
+      "page": "FAQ",
+      "url": "https://www.iul.ac.in/AdmissionInfo/FAQ.aspx",
+      "verified_on": "2026-10-16",
+      "language": "hi",
+      "text": "प्रश्न: hostel की समस्या किसे बतानी चाहिए? उत्तर: आधिकारिक FAQ के अनुसार Chief Warden या Deputy Chief Hostel Warden को बताएं। वर्तमान संपर्क विवरण के लिए linked hostel page देखें।"
+    },
+    {
+      "source": "Integral University official admissions process",
+      "url": "https://www.iul.ac.in/admissions/index",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "Admissions: The official admissions page describes online and paper-based application routes. For the paper route, obtain the application form from campus and submit it to the Directorate of Admissions with the required documents. Check the current official admission portal for the active application process and deadlines."
+    },
+    {
+      "source": "Integral University official admissions process",
+      "url": "https://www.iul.ac.in/admissions/index",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "Admission documents: The official admissions page lists High School and Intermediate mark sheets, graduation mark sheet if applicable, migration/transfer certificate, character certificate, passport-size photographs, Aadhaar Card, and NAD ID. The exact list can vary by program and applicant; verify current requirements with Admissions."
+    },
+    {
+      "source": "Integral University official admission criteria",
+      "url": "https://www.iul.ac.in/admissioninfo/Admission_Criteria.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "Entrance requirements vary by program. The official admission criteria page says IUET-2026 applies to offered programs except B.Arch and MBBS/MD/MS; it gives separate entrance and counselling requirements for those programs. Verify current program-specific criteria directly on the official page before applying."
+    },
+    {
+      "source": "Integral University official scholarship schemes",
+      "url": "https://www.iul.ac.in/admissioninfo/Integral_University_Scholarships_Schemes.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "Scholarships: The official scholarship schemes page lists merit-based tuition waivers (100% at 90% or above, 50% at 85% or above, and 25% at 80% or above) and other schemes including sibling, alumni, staff, Jammu and Kashmir, North Eastern Region, progression, specially abled, adopted village, orphan, sports, means-based aid, and Integral Research Fellowship. The page says terms and conditions apply; eligibility, availability, and amounts must be confirmed with the Scholarship Cell."
+    },
+    {
+      "source": "Integral University official Student Grievance Redressal Committee",
+      "url": "https://www.iul.ac.in/Student-Grievance-Redressal-Committee.aspx",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "Student grievance: The official Student Grievance Redressal Committee page says students may submit a written application in person or email sgrc@iul.ac.in. If dissatisfied with the committee's action, a student may seek redress through a complaint to the Ombudsperson. Check the official page for current procedure and committee information."
+    },
+    {
+      "source": "Integral University official hostel facility page",
+      "url": "https://www.iul.ac.in/admissions/Hostel_Facility",
+      "verified_on": "2026-10-16",
+      "language": "en",
+      "text": "Hostel support and facilities: The official hostel page lists boys' hostel enquiry at +91 8881103500 and girls' hostel enquiry at +91 8881103400. It describes separate boys' and girls' hostels, Wi-Fi, dining, study and reading spaces, common rooms, sports facilities, and wardens. Contact the hostel office for current availability, fees, and allocation."
     }
   ]
 }
-
